@@ -16,12 +16,16 @@
     <repositories>
         <!-- This adds the Spigot Maven repository to the build -->
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>dark</id>
+            <url>https://maven.darkmg1.dev/repository/maven-releases/</url>
         </repository>
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>minecraft-repo</id>
+            <url>https://libraries.minecraft.net/</url>
         </repository>
     </repositories>
 
@@ -29,65 +33,21 @@
         <!--This adds the Spigot API artifact to the build -->
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.16.3-R0.1-SNAPSHOT</version>
+            <artifactId>spigot</artifactId>
+            <version>1.16.3</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.MilkBowl</groupId>
-            <artifactId>VaultAPI</artifactId>
-            <version>1.7</version>
+            <artifactId>Vault</artifactId>
+            <version>1.7.3</version>
             <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>bukkit</artifactId>
-                    <groupId>org.bukkit</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jsr305</artifactId>
-                    <groupId>com.google.code.findbugs</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>bukkit-classloader-check</artifactId>
-                    <groupId>org.sk89q.bukkit</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>dummypermscompat</artifactId>
-                    <groupId>com.sk89q</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jchronic</artifactId>
-                    <groupId>com.sk89q</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>js</artifactId>
-                    <groupId>rhino</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>truezip</artifactId>
-                    <groupId>de.schlichtherle</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jlibnoise</artifactId>
-                    <groupId>com.sk89q.lib</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>paranamer</artifactId>
-                    <groupId>com.thoughtworks.paranamer</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>guava</artifactId>
-                    <groupId>com.google.guava</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>gson</artifactId>
-                    <groupId>com.google.code.gson</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>snakeyaml</artifactId>
-                    <groupId>org.yaml</groupId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>authlib</artifactId>
+            <version>1.5.25</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
